@@ -1,5 +1,140 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Charm:wght@400;700&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Diplomata+SC&family=Goblin+One&family=Goldman:wght@400;700&family=Jacques+Francois+Shadow&family=Monoton&family=Protest+Guerrilla&family=Rye&family=Train+One&family=Vast+Shadow&display=swap');
+
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    list-style-type: none;
+    font-family: 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+    color: white;
+
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: black
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #c9c9c9;
+    border-radius: 25px;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: #0D1218;
+    display: flex;
+}
+
+#logoForNav {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-basis: 40%;
+
+}
+
+#logoForNav>img {
+    height: inherit;
+    background-size: cover;
+
+}
+
+#logoForNav>h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: "Charm", cursive;
+}
+
+#navigationList {
+    flex-basis: 60%;
+    height: inherit;
+    /* margin: 0px 3px; */
+
+}
+
+#navigationList ul {
+    display: flex;
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bookNow {
+    display: block;
+    background-color: gray;
+    padding: 13px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.navDecor {
+    display: block;
+    width: 0%;
+    height: 10px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: white;
+    transition: width 0.5s;
+    position: relative;
+    top: 35px;
+}
+
+#navigationList li:hover .navDecor {
+    width: 110%;
+}
+
+/* Hero BLOCK */
+#heroBlock {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#heroBackgroundImg {
+    height: 130%;
+    width: inherit;
+    background-image: url(/images/HeroBackground.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(1.4px);
+    filter: brightness(30%);
+
+}
+
+#heroText {
+    position: absolute;
+    top: 30px;
+    width: inherit;
+    height: inherit;
+
+}
+
+#heroBlockQuote h1{
+    font-size: 2.6rem;
+    font-family: "Goblin One", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    text-shadow: 0px 0px 10px blueviolet;
+  
+}
+#heroTextColor>span{
+    font-size: 3.1rem;
+    margin-top: 20px;
+    font-family: "Goblin One", serif;
+    color: #049199;
+    text-shadow: 0px 2px 30px blue;
+
 }
