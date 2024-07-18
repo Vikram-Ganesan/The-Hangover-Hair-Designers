@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Charm:wght@400;700&family=Rye&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Diplomata+SC&family=Goblin+One&family=Goldman:wght@400;700&family=Jacques+Francois+Shadow&family=Monoton&family=Protest+Guerrilla&family=Rye&family=Train+One&family=Vast+Shadow&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
@@ -9,7 +11,6 @@
     font-family: 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
     color: white;
-
 }
 
 body::-webkit-scrollbar {
@@ -54,12 +55,14 @@ nav {
     justify-content: center;
     font-size: 2rem;
     font-family: "Charm", cursive;
+
 }
 
 #navigationList {
     flex-basis: 60%;
     height: inherit;
     /* margin: 0px 3px; */
+
 
 }
 
@@ -68,6 +71,8 @@ nav {
     height: inherit;
     justify-content: space-around;
     align-items: center;
+    font-size: 18px;
+
 }
 
 #bookNow {
@@ -76,6 +81,10 @@ nav {
     padding: 13px;
     border-radius: 20px;
     font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+
 }
 
 .navDecor {
@@ -94,7 +103,7 @@ nav {
 }
 
 /* Hero BLOCK */
-#heroBlock {
+.heroBlock {
     width: 100%;
     height: 100vh;
     position: relative;
@@ -119,7 +128,7 @@ nav {
 
 }
 
-#heroBlockQuote h1{
+#heroBlockQuote h1 {
     font-size: 2.6rem;
     font-family: "Goblin One", serif;
     display: flex;
@@ -128,13 +137,191 @@ nav {
     align-items: center;
     margin-top: 10px;
     text-shadow: 0px 0px 10px blueviolet;
-  
+
 }
-#heroTextColor>span{
+
+#heroTextColor>span {
     font-size: 3.1rem;
     margin-top: 20px;
     font-family: "Goblin One", serif;
-    color: #049199;
+    color: greenyellow;
     text-shadow: 0px 2px 30px blue;
 
+}
+
+#heroIntroText>h2 {
+    margin: 75px;
+    text-align: center;
+    text-shadow: 0px 0px 10px black;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+}
+
+.heroMemberList {
+    display: flex;
+    justify-content: center;
+}
+
+.heroMemberList>h1 {
+    margin: 0px 20px 0px 20px;
+}
+
+.heroMemberList>h1 span {
+    font-size: 2rem;
+    font-family: "Goblin One", serif;
+    color: greenyellow;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heroMemberList>h1 p {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 0px 0px;
+    text-shadow: 0px 0px 10px blueviolet;
+
+
+}
+
+.glitter-button {
+    /* background-color: gray; */
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+
+    font-weight: bold;
+    margin-top: 50px;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.glitter-button::before,
+#bookNow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(-45deg);
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+
+/* MAIN BLOCK STARTS */
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    margin-top: 147px;
+}
+
+#aboutUs {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+}
+
+#aboutBackground {
+    flex-basis: 50%;
+    height: inherit;
+    position: relative;
+}
+
+#aboutBackground h1 {
+    color: black;
+    font-family: "Train One", sans-serif;
+    word-spacing: 10px;
+    padding-top: 30px;
+    margin: 5px 40px;
+    font-size: 2.5rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* color: chocolate; */
+    text-shadow: 0px 0px 5px blueviolet;
+
+}
+
+#aboutBackground img {
+    position: absolute;
+    z-index: 1;
+    bottom: 15px;
+    left: 50px;
+    filter: drop-shadow(0px 0px 5px yellow);
+}
+
+#aboutText {
+    padding-top: 40px;
+    margin: 5px 0px;
+    flex-basis: 50%;
+    width: inherit;
+    height: inherit;
+
+    /* font-size: 20px; */
+}
+
+#aboutTextHead>h1 {
+    font-family: "Goblin One", serif;
+    color: black;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+#aboutTextHead>span {
+    display: block;
+    margin: 7px 0px 20px;
+    height: 4px;
+    width: 130px;
+    border-radius: 20px;
+    background-color: black;
+
+}
+#aboutTextContent>p {
+    text-align: justify;
+    margin-right: 20px;
+    font-size: 18px;
+    color: black;
+}
+#textContentHead{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+#textContentHead>span, .shopName{
+    color:deeppink;
+    font-weight: bold;
+    font-family: "goldman";
+    /* text-shadow: 0px 0px 5px black; */
 }
